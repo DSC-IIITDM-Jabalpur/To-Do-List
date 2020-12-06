@@ -131,7 +131,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     DatabaseHandler db = new DatabaseHandler(context);
                     db.deleteTask(id);
                     taskList.remove(getAdapterPosition());
-                    //worked only with getAdapterPosition not with id
                     notifyItemRemoved(getAdapterPosition());
                     dialog.dismiss();
                 }
@@ -189,8 +188,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                             !(startime_pop.getText().toString().isEmpty()) &&
                             deadline_pop.getText().toString().trim().length()!=0 &&
                             !status_pop.getText().toString().isEmpty()) {
-                        //update function of database
-                        db.updateTask(newtask);
+                        //TODO:update function of database
+
                         notifyItemChanged(getAdapterPosition(),newtask);//important
                     }else
                     {

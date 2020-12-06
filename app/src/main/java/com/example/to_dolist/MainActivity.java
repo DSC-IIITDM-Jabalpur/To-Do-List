@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         deadline = view.findViewById(R.id.deadline_pop);
         status = view.findViewById(R.id.status_pop);
         saveButton = view.findViewById(R.id.saveStatus);
-        //TODO:save button on popup
+        //save button on popup
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
                         !deadline.getText().toString().isEmpty()&&
                         !status.getText().toString().isEmpty()) {
                     //and then saving it to database
+                    //TODO: Function to save data on database
                     saveTask(view);
                 }else
                 {
@@ -128,8 +129,8 @@ public class MainActivity extends AppCompatActivity {
         task.setDeadline(dead);
         task.setStatus(Status);
 
-        //and saving it to database
-        databaseHandler.addTask(task);
+        //TODO:saving it to database
+        //types here
 
         Snackbar.make(view,"Item Saved",Snackbar.LENGTH_SHORT).show();
 
