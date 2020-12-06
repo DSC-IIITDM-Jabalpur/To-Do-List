@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:padding="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/title"
+                android:textStyle="italic"
+                android:textSize="20sp"
+                android:text="@string/enter_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/tasks_pop"
+                android:layout_below="@+id/title"
+                android:layout_width="match_parent"
+                android:hint="@string/hint_task"
+                android:layout_height="wrap_content"
+                android:autofillHints="none"
+                android:inputType="textAutoCorrect" />
+            <EditText
+                android:id="@+id/deadline_pop"
+                android:layout_below="@+id/starttime_pop"
+                android:layout_width="match_parent"
+                android:hint="@string/hint_deadline"
+                android:layout_height="wrap_content"
+                android:inputType="datetime"/>
+            <EditText
+                android:id="@+id/starttime_pop"
+                android:layout_below="@+id/tasks_pop"
+                android:layout_width="match_parent"
+                android:hint="@string/hint_start"
+                android:layout_height="wrap_content"
+                android:inputType="datetime"/>
+            <EditText
+                android:id="@+id/status_pop"
+                android:layout_below="@+id/deadline_pop"
+                android:layout_width="match_parent"
+                android:hint="@string/hint_status"
+                android:layout_height="wrap_content"
+                android:inputType="textAutoCorrect"/>
+            <Button
+                android:id="@+id/saveStatus"
+                android:layout_below="@+id/status_pop"
+                android:layout_marginEnd="5dp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="@string/saveStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

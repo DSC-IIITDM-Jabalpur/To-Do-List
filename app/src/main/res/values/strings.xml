@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">To-Do List</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="sure_text">Are you sure to delete it?</string>
+    <string name="Update">Update</string>
+    <string name="enter_item">Enter your Task</string>
+    <string name="hint_task">Enter Task</string>
+    <string name="hint_deadline">Enter Deadline</string>
+    <string name="hint_start">When it starts</string>
+    <string name="hint_status">Pending or Completed?</string>
+    <string name="saveStatus">Save Task</string>
+</resources>
