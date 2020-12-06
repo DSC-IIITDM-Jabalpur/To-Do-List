@@ -8,8 +8,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.to_dolist.Data.DatabaseHandler;
+import com.example.to_dolist.MainActivity;
 import com.example.to_dolist.Model.Task;
 import com.example.to_dolist.R;
 import com.google.android.material.snackbar.Snackbar;
@@ -102,6 +104,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     break;
 
                 case R.id.deleteBut:
+                    Toast.makeText(context,"Implement it",Toast.LENGTH_LONG).show();
                     deletetask(task.getId());
                     break;
             }
@@ -110,35 +113,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
 
         private void deletetask(final int id) {
-
-            //to set popup
-            builder = new AlertDialog.Builder(context);
-            inflator = LayoutInflater.from(context);
-            View view = inflator.inflate(R.layout.confirmation_popup, null);
-            builder.setView(view);
-            dialog = builder.create();
-            dialog.show();
-
-
-            Button noButton = view.findViewById(R.id.conf_no_but);
-            Button yesButton = view.findViewById(R.id.conf_yes_but);
-
-
-            //on clicking yes button
-            yesButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    DatabaseHandler db = new DatabaseHandler(context);
-                    db.deleteTask(id);
-                    taskList.remove(getAdapterPosition());
-                    notifyItemRemoved(getAdapterPosition());
-                    dialog.dismiss();
-                }
-            });
-
-            //on clicking no button
-            noButton.setOnClickListener(v -> dialog.dismiss());
-
+            //TODO: try to implement deleteTask on your own
 
         }
 
